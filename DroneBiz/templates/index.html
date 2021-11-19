@@ -1,14 +1,18 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <title>
-        {{ title }}
-    </title>
-    <body>
-        <h1>this is common among all webpages</h1>
+<html lang="en" dir="ltr"/>
 
-        {% block content %}
-        {% endblock %}
-    </body>
+<head>
+	<meta charset="utf-8" />
+	<title>
+		{{ title }}
+	</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/template.css') }}">
+
+	<body>
+		<h1>this is common among all webpages</h1>
+
+		{% block content %} {% endblock %}
+	</body>
 </head>
+
 </html>
